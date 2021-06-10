@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		116E8DA126729000006A8BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E8DA026729000006A8BF0 /* AppDelegate.swift */; };
 		116E8DA326729000006A8BF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E8DA226729000006A8BF0 /* SceneDelegate.swift */; };
-		116E8DA526729000006A8BF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E8DA426729000006A8BF0 /* ViewController.swift */; };
+		116E8DA526729000006A8BF0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E8DA426729000006A8BF0 /* MainView.swift */; };
 		116E8DA826729000006A8BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116E8DA626729000006A8BF0 /* Main.storyboard */; };
 		116E8DAA26729005006A8BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116E8DA926729005006A8BF0 /* Assets.xcassets */; };
 		116E8DAD26729005006A8BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116E8DAB26729005006A8BF0 /* LaunchScreen.storyboard */; };
+		116E8DB526729605006A8BF0 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E8DB426729605006A8BF0 /* ModuleBuilder.swift */; };
+		116E8DB726729624006A8BF0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E8DB626729624006A8BF0 /* Router.swift */; };
+		116E8DB926729690006A8BF0 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E8DB826729690006A8BF0 /* MainPresenter.swift */; };
+		116E8DBB267296D0006A8BF0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E8DBA267296D0006A8BF0 /* NetworkService.swift */; };
+		116E8DC1267297B4006A8BF0 /* Extentions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E8DC0267297B4006A8BF0 /* Extentions+UIView.swift */; };
+		116E8DC72672A591006A8BF0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116E8DC62672A591006A8BF0 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		116E8D9D26729000006A8BF0 /* GoraTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoraTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		116E8DA026729000006A8BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		116E8DA226729000006A8BF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		116E8DA426729000006A8BF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		116E8DA426729000006A8BF0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		116E8DA726729000006A8BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		116E8DA926729005006A8BF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		116E8DAC26729005006A8BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		116E8DAE26729005006A8BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		116E8DB426729605006A8BF0 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		116E8DB626729624006A8BF0 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		116E8DB826729690006A8BF0 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		116E8DBA267296D0006A8BF0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		116E8DC0267297B4006A8BF0 /* Extentions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions+UIView.swift"; sourceTree = "<group>"; };
+		116E8DC62672A591006A8BF0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +70,67 @@
 			children = (
 				116E8DA026729000006A8BF0 /* AppDelegate.swift */,
 				116E8DA226729000006A8BF0 /* SceneDelegate.swift */,
-				116E8DA426729000006A8BF0 /* ViewController.swift */,
+				116E8DB426729605006A8BF0 /* ModuleBuilder.swift */,
+				116E8DB626729624006A8BF0 /* Router.swift */,
+				116E8DBE2672974D006A8BF0 /* MainModule */,
+				116E8DBF26729774006A8BF0 /* ServiceLayer */,
+				116E8DC2267297CA006A8BF0 /* Extensions */,
 				116E8DA626729000006A8BF0 /* Main.storyboard */,
 				116E8DA926729005006A8BF0 /* Assets.xcassets */,
 				116E8DAB26729005006A8BF0 /* LaunchScreen.storyboard */,
 				116E8DAE26729005006A8BF0 /* Info.plist */,
 			);
 			path = GoraTest;
+			sourceTree = "<group>";
+		};
+		116E8DBC267296DC006A8BF0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				116E8DB826729690006A8BF0 /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		116E8DBD2672973F006A8BF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				116E8DA426729000006A8BF0 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		116E8DBE2672974D006A8BF0 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				116E8DC5267297FB006A8BF0 /* Model */,
+				116E8DBD2672973F006A8BF0 /* View */,
+				116E8DBC267296DC006A8BF0 /* Presenter */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		116E8DBF26729774006A8BF0 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				116E8DBA267296D0006A8BF0 /* NetworkService.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		116E8DC2267297CA006A8BF0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				116E8DC0267297B4006A8BF0 /* Extentions+UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		116E8DC5267297FB006A8BF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				116E8DC62672A591006A8BF0 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +203,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				116E8DA526729000006A8BF0 /* ViewController.swift in Sources */,
+				116E8DA526729000006A8BF0 /* MainView.swift in Sources */,
+				116E8DB926729690006A8BF0 /* MainPresenter.swift in Sources */,
 				116E8DA126729000006A8BF0 /* AppDelegate.swift in Sources */,
+				116E8DB726729624006A8BF0 /* Router.swift in Sources */,
 				116E8DA326729000006A8BF0 /* SceneDelegate.swift in Sources */,
+				116E8DB526729605006A8BF0 /* ModuleBuilder.swift in Sources */,
+				116E8DBB267296D0006A8BF0 /* NetworkService.swift in Sources */,
+				116E8DC72672A591006A8BF0 /* User.swift in Sources */,
+				116E8DC1267297B4006A8BF0 /* Extentions+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQG28G6TA5;
 				INFOPLIST_FILE = GoraTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQG28G6TA5;
 				INFOPLIST_FILE = GoraTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
