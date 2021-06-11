@@ -3,7 +3,7 @@ import UIKit
 class MainView: UITableViewController {
 
     var presenter: MainViewPresenterProtocol!
-    var users: [User]?
+    fileprivate var users: [User]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,13 @@ class MainView: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users?.count ?? 0
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.tapOnUser(userId: users?[indexPath.row].id)
+    }
 }
+
+// MARK: - MainViewProtocol extension
 
 extension MainView: MainViewProtocol {
     func succes(_ users: [User]?) {
@@ -32,7 +38,7 @@ extension MainView: MainViewProtocol {
     }
 
     func failure(error: Error) {
-        print(error.localizedDescription)
+        showErrorAC(error)
     }
 }
 

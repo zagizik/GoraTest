@@ -8,13 +8,14 @@ protocol MainViewProtocol: AnyObject {
 protocol MainViewPresenterProtocol: AnyObject {
     init (view: MainViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol)
     func getUsers()
+    func tapOnUser(userId: Int?)
 }
 
 class MainPresenter: MainViewPresenterProtocol {
     
     weak var view: MainViewProtocol?
-    let networkService: NetworkServiceProtocol?
-    var router: RouterProtocol?
+    fileprivate let networkService: NetworkServiceProtocol?
+    fileprivate var router: RouterProtocol?
     
     required init(view: MainViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol) {
         self.view = view
@@ -24,13 +25,18 @@ class MainPresenter: MainViewPresenterProtocol {
     }
     
     func getUsers() {
-        networkService?.getUsers(complition: { result in
+        let urlString = "https://jsonplaceholder.typicode.com/users"
+        networkService?.loadData(of: [User].self, urlString: urlString)  { [weak self] result in
             switch result {
             case .failure(let error):
-                self.view?.failure(error: error)
+                self?.view?.failure(error: error)
             case.success(let users):
-                self.view?.succes(users)
+                self?.view?.succes(users)
             }
-        })
+        }
+    }
+    
+    func tapOnUser(userId: Int?){
+        router?.showDetail(userId: userId)
     }
 }
