@@ -85,3 +85,13 @@ extension UIView {
         }
     }
 }
+
+extension UIViewController {
+    func showErrorAC( _ error: Error) {
+        DispatchQueue.main.async {
+            let ac = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(ac, animated: true)
+        }
+    }
+}

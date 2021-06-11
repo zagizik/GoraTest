@@ -6,6 +6,7 @@ protocol RouterMain {
 }
 protocol RouterProtocol: RouterMain {
     func initialViewController()
+    func showDetail(userId: Int?)
     func popToRoot()
 }
 
@@ -23,6 +24,13 @@ class Router: RouterProtocol {
         if let navigationController = navigationController {
             guard let mainViewController = assamblyBuilder?.createMainModule(router: self) else { return }
             navigationController.viewControllers = [mainViewController]
+        }
+    }
+    
+    func showDetail(userId: Int?) {
+        if let navigationController = navigationController {
+            guard let detailViewController = assamblyBuilder?.createDetailModule(userId: userId, router: self) else { return }
+            navigationController.pushViewController(detailViewController, animated: true)
         }
     }
     
